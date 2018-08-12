@@ -11,6 +11,7 @@ module.exports = function (settings) {
         })
     });
 
+    router.use('/blink1', require('./public/blink1'));
 
 
     return router;
