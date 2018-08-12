@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  div.container
+
+    div.row
+      div.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+        h1= title
+
+    div.row
+      div.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+        form(action=loginUrl, method='POST')
+          if loginMsg != undefined && loginMsg.length > 0
+            div.panel.panel-danger
+              div.panel-body
+                div.text-danger= loginMsg
+
+          div.form-group
+            label Email
+            input.form-control(type='text', name='email', placeholder='email')
+          div.form-group
+            label Password
+            input.form-control(type='password', name='password', placeholder='password')
+          button.btn.btn-primary(type='submit') Log In
+          a.btn.btn-success(href='/signup') Sign Up

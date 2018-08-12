@@ -1,0 +1,23 @@
+.text-center
+  h3
+    b Log In
+form#login-form(ng-submit='navbar.login()', method='post', role='form', autocomplete='off')
+  #errorPanel.panel.panel-danger(ng-show='navbar.showLoginErrorMsg')
+    .panel-body.text-danger {{navbar.loginErrorMsg}}
+  .form-group
+    .input-group
+      .input-group-addon
+        i.fa.fa-envelope-o.fa-fw
+      input#email.form-control(type='text', name='email', tabindex='1', ng-model='navbar.loginEmail', placeholder='Email Address', value='', autocomplete='off', required='')
+  .form-group
+    .input-group
+      .input-group-addon
+        i.fa.fa-lock.fa-fw
+      input#password.form-control(type='password', name='password', tabindex='2', ng-model='navbar.loginPass', placeholder='Password', autocomplete='off', required='')
+  .form-group
+    .row
+      .col-xs-7
+        .text-center
+          a.forgot-password(href='/recover', tabindex='5') Forgot Password?
+      .col-xs-5.pull-right
+        input#login-submit.form-control.btn.btn-primary(type='submit', name='login-submit', tabindex='4', value='Log In')

@@ -1,0 +1,17 @@
+div
+  h3.text-center And this is the profile page
+  p
+    | {{$ctrl.message}}
+
+  if user
+    div.container
+      div.row
+        div.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+        h1= title
+
+      div.row
+        div.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+          h2.text-success Welcome #{user.local.email}
+          div
+            b.text-uppercase email:
+            span= user.local.email

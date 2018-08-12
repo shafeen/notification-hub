@@ -1,0 +1,32 @@
+doctype html
+html(ng-app='basicMEAN')
+  head
+    title= title
+    script(src="/libraries/jquery-1.12.5.min.js")
+    script(src="/libraries/jquery-ui.min.js")
+    script(src="/libraries/bootstrap/js/bootstrap.js")
+    link(rel="stylesheet", type="text/css", href="/libraries/bootstrap/css/bootstrap.css")
+    script(src="/libraries/angular/1.5.8/angular.min.js")
+    script(src="/libraries/angular/1.5.8/angular-ui-router.min.js")
+    script(src="/libraries/angular/1.5.8/angular-resource.min.js")
+
+    link(rel="stylesheet" href="/libraries/font-awesome-4.7.0/css/font-awesome.min.css")
+    link(rel="stylesheet", type="text/css", href="/stylesheets/style.css")
+
+  body
+    navbar
+        
+    block content
+
+    //- inject:js
+    script(src="/build/ng-client.js")
+    //- endinject
+
+    //script(src="/config.js")
+    //script(src="services/Settings.service.js")
+    //script(src="services/Search.service.js")
+    //script(src="navbar/NavbarCtrl.js")
+    //script(src="view1/View1Ctrl.js")
+    //script(src="view2/View2Ctrl.js")
+    //script(src="view-search/ViewSearchCtrl.js")
+    //script(src="view-protected/ViewProtectedCtrl.js")
