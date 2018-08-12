@@ -6,8 +6,8 @@
     "serve": "",
     "debug": "node ./bin/www",
     "prepare-dist": "gulp prep-dist",
-    "start-nogulp": "nodemon -e pug,html,js ./server/bin/www",
-    "start": "gulp watch-angular | nodemon -e pug,html,js ./server/bin/www"
+    "start-withgulp": "gulp watch-angular | nodemon -e pug,html,js ./server/bin/www",
+    "start": "nodemon -e pug,html,js ./server/bin/www"
   },
   "dependencies": {
     "@uirouter/angularjs": "^1.0.14",
@@ -16,6 +16,7 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "express": "^4.16.3",
+    "express-bearer-token": "^2.2.0",
     "express-flash": "0.0.2",
     "express-session": "^1.14.2",
     "lodash": "^4.17.2",
